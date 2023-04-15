@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    @apply h-full;
+  }
+  body {
+    @apply h-full;
+  }
+  #__next {
+	@apply h-full;
+  }
+  html {
+	@apply h-full;
+  }
+}
+
+@font-face {
+    font-family: 'Varsity';
+    src: url('../public/assets/fonts/varsity_regular.ttf');
+}
+
+@font-face {
+  font-family: 'Cutmark';
+  src: url('../public/assets/fonts/Cutmark-NrXBold.ttf');
+}
+
+@font-face {
+  font-family: 'CutmarkLight';
+  src: url('../public/assets/fonts/Cutmark-CnLight.ttf');
+}
+
+#cf img {
+  animation-name: cf3FadeInOut;
+  animation-timing-function: ease-in-out;
+/* if you only want to cycle a finite amount of times,
+ simply change 'infinite' with # of iterations you need */
+  animation-iteration-count: infinite;
+  animation-duration: 24s;
+  animation-direction: alternate; /* not strictly necessary */
+  position:absolute;
+}
+
+#cf img:nth-of-type(1) {
+  animation-delay: 20s;
+}
+
+#cf img:nth-of-type(2) {
+  animation-delay: 12s;
+}
+
+#cf img:nth-of-type(3) {
+  /* add some delay for the first picture as well */
+  animation-delay: 4s;
+}
+
+@keyframes cf3FadeInOut {
+  /* distributing times evenly */
+  0% {
+      opacity: 1;
+  }
+  25% {
+      opacity: 0;
+  }
+  75% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.theme-Black {
+  background-image: url('../public/assets/blackBackground.png');
+  background-size: cover;
+}
+
+.theme-Blue {
+  background-image: url('../public/assets/blueBackground.png');
+  background-size: cover;
+}
+
+.theme-Brown {
+  background-image: url('../public/assets/brownBackground.png');
+  background-size: cover;
+}
+
+.theme-Purple {
+  background-image: url('../public/assets/purpleBackground.png');
+  background-size: cover;
+}
